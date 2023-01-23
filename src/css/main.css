@@ -1,0 +1,274 @@
+@import url(./reset.css);
+@import url(./config.css);
+@import url(./var.css);
+@import url(./animacs.css);
+@import url(./scroll.css);
+
+body {
+  overflow: hidden;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 0 3%;
+  background-color: transparent;
+  z-index: 100;
+}
+
+.menu__left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu__logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.menu__logo_text {
+  font-weight: 300;
+  transition: all 0.4s ease 0s;
+}
+
+.menu__logo:hover .menu__logo_text {
+  color: var(--color-accent);
+}
+
+.menu__btn {
+  display: inline-block;
+  padding: 10px 28px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 10em;
+  background-color: var(--color-accent);
+  transition: all 0.4s ease 0s;
+}
+
+.menu__btn:hover {
+  background-color: #8c18af;
+}
+
+
+/* CARD ************** */
+
+.card-wrapper {
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: -100px;
+  min-height: 700px;
+  /* cursor: default; */
+  overflow: hidden;
+  transition: all 1s ease-out 0s;
+}
+
+.card-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/map/ukr.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  opacity: 0.2;
+  z-index: -100;
+}
+
+.card-wrapper__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  height: 100%;
+  transition: all 1s cubic-bezier(.29,.99,.79,.98) 0s;
+}
+
+.card-desc,
+.card {
+  margin: 10px;
+  width: 50%;
+}
+
+.card-desc__title {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.card-desc__title_color {
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.card-desc__title_small {
+  font-weight: 300;
+}
+
+.card-desc__text {
+  margin-bottom: 15px;
+}
+
+.card-desc__link-wrapper {
+  position: relative;
+}
+
+.card-desc__link {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+  /* padding: 0; */
+  color: var(--color-accent);
+  transition: all 0.4s ease 0s;
+}
+
+.card-desc__link:hover {
+  color: #fff;
+}
+
+.card-desc__link-arrow {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 36px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-accent);
+  border-radius: 100%;
+}
+
+/* CARD */
+
+.card {
+  position: relative;
+  width: 458px;
+  height: 288px;
+}
+
+.card__item {
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.card__bg_1,
+.card__bg_2,
+.card__bg_3 {
+  width: 458px;
+  height: 288px;
+  z-index: -2;
+}
+
+.card__bg_2 {
+  opacity: 0.6;
+  z-index: -3;
+}
+
+.card__bg_3 {
+  opacity: 0.2;
+  z-index: -4;
+}
+
+.card__map {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.card__master-card {
+  width: 90px;
+  right: 30px;
+  bottom: 20px;
+}
+
+.card__bank {
+  font-size: 33px;
+  font-weight: 700;
+  right: 250px;
+  bottom: 210px;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+}
+
+.card__number {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+  right: 50px;
+  bottom: 80px;
+}
+
+.card__name {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  right: 273px;
+  bottom: 27px;
+}
+
+.card__exp {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  right: 156px;
+  bottom: 59px;
+}
+
+.card__exp-date {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+  right: 143px;
+  bottom: 17px;
+}
+
+.card__mm {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  right: 193px;
+  bottom: 8px;
+}
+
+.card__yy {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  right: 149px;
+  bottom: 8px;
+}

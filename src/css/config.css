@@ -1,0 +1,26 @@
+html {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: #fff;
+}
+
+body {
+  /* max-width: 1600px; */
+  min-width: 320px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  background-color: #1c1c1c;
+
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+

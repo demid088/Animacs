@@ -1,0 +1,69 @@
+/* PERSPECTIVE */
+
+* {
+  cursor: none !important;
+}
+
+.card-wrapper {
+  perspective: 1000px;
+}
+
+.card-wrapper__content,
+.card-desc,
+.card {
+  transform-style: preserve-3d;
+}
+
+.level-0 {
+  transform: translateZ(-80px);
+}
+
+.level-1 {
+  transform: translateZ(-40px);
+}
+
+.level-2 {
+  transform: translateZ(0px);
+}
+
+.level-3 {
+  transform: translateZ(40px);
+}
+
+/* CURSOR */
+
+.cursor,
+.cursor-aura {
+  position: absolute;
+  border-radius: 100%;
+  transition: transform 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33), opacity 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.cursor.hidden,
+.cursor-aura.hidden {
+  transform: scale(0.001);
+}
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-4px, -4px);
+}
+
+.cursor.active {
+  transform: scale(0.001);
+}
+
+.cursor-aura {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.cursor-aura.active {
+  transform: scale(1.3);
+  border: 1.2px solid rgba(255, 255, 255, 0.35);
+}
